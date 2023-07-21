@@ -1,19 +1,20 @@
 .card {
   background-color: #4eb1c7;
-  width: 841px;
-  height: 841px;
+  width: 600px;
+  height: auto;
+  padding: 30px 0;
 
   .cardTitle {
     padding: 8px 16px;
     background-color: white;
-    margin: 46px;
+    margin: 0 30px 30px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     h1 {
-      font-size: 96px;
+      font-size: 64px;
       color: #4e61c7;
       font-weight: 700;
       margin: 0;
@@ -21,7 +22,7 @@
   }
 
   .questionBox {
-    margin: 46px;
+    margin: 0 30px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -56,7 +57,8 @@
       border-bottom-left-radius: 40px;
       p {
         color: #000;
-        font-size: 32px;
+        font-size: 24px;
+        text-align: center;
         font-weight: 600;
       }
     }
@@ -72,36 +74,43 @@
   }
 
   .timer {
-    margin-left: 46px;
+    margin-left: 30px;
+    padding-left: 20px;
+    margin-bottom: 30px;
     p {
+      margin: 0;
       color: #1400ff;
       font-family: Poppins;
-      font-size: 32px;
+      font-size: 24px;
       font-style: normal;
       font-weight: 500;
     }
   }
-  .containerAnswer {
+  .containerAnswerCorrect {
     display: flex;
     justify-content: space-between;
-    margin: auto 46px;
+    margin: 0 30px;
     align-items: center;
 
     .btn {
       border-radius: 25px;
       background: #1400ff;
       margin: 0;
-      height: 60px;
-      padding: 11px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      padding: 4px 73px;
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
       color: white;
       border-color: #1400ff;
+      cursor: pointer;
     }
     .containerIcon {
-      width: 140px;
-      height: 140px;
+      width: 90px;
+      height: 90px;
       border-radius: 9999px;
       background-color: white;
       display: flex;
@@ -109,6 +118,42 @@
       align-items: center;
       img {
         width: 70%;
+      }
+    }
+  }
+
+  .containerAnswerFalse {
+    display: flex;
+    margin: 0 30px;
+    gap: 17px;
+    align-items: center;
+
+    .btn {
+      border-radius: 25px;
+      background: #1400ff;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      padding: 4px 73px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      color: white;
+      border-color: #1400ff;
+      cursor: pointer;
+    }
+    .containerIcon {
+      width: 90px;
+      height: 90px;
+      border-radius: 9999px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 40%;
       }
     }
   }

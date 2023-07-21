@@ -1,8 +1,10 @@
-import { useState } from "react";
 import styles from "./App.module.scss";
-import Card from "./components/Card";
 import { Wizard } from "react-use-wizard";
 import { questions } from "./utils/questions";
+
+// components
+import Card from "./components/Card";
+
 function App() {
   return (
     <>

@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import styles from "./Card.module.scss";
 import PinInput from "react-pin-input";
 import { useWizard } from "react-use-wizard";
+
+// assets
 import correctIcon from "../assets/correctIcon.png";
 import falseIcon from "../assets/falseIcon.png";
 
 export default function Card({ data }) {
-  const { handleStep, previousStep, nextStep } = useWizard();
-  const [timeLeft, setTimeLeft] = useState(120); // Waktu dalam detik (2 menit = 120 detik)
+  const { nextStep } = useWizard();
+  const [timeLeft, setTimeLeft] = useState(120);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const [value, setValue] = useState("");
   const [correct, setCorrect] = useState("");
@@ -54,6 +56,7 @@ export default function Card({ data }) {
       }, 1000);
     } else if (timeLeft === 0) {
       stopTimer();
+      checkAnswer();
     }
     return () => {
       clearInterval(timer);
@@ -81,17 +84,17 @@ export default function Card({ data }) {
           type="custom  "
           style={{
             display: "flex",
-            padding: "10px",
+            padding: "20px",
             gap: "16px",
-            margin: "0 46px",
+            margin: "0 30px",
           }}
           inputStyle={{
             borderColor: "white",
             backgroundColor: "white",
             width: "100%",
-            height: "82px",
+            height: "50px",
             color: "black",
-            fontSize: "60px",
+            fontSize: "40px",
             fontWeight: "600",
           }}
           inputFocusStyle={{ borderColor: "black" }}
@@ -100,7 +103,13 @@ export default function Card({ data }) {
       <div className={styles.timer}>
         <p>Waktu Tersisa: {formatTime(timeLeft)}</p>
       </div>
-      <div className={styles.containerAnswer}>
+      <div
+        className={
+          correct === true
+            ? styles.containerAnswerCorrect
+            : styles.containerAnswerFalse
+        }
+      >
         <button className={styles.btn} onClick={checkAnswer}>
           JAWAB
         </button>
