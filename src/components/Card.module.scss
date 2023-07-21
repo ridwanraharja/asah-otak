@@ -1,0 +1,115 @@
+.card {
+  background-color: #4eb1c7;
+  width: 841px;
+  height: 841px;
+
+  .cardTitle {
+    padding: 8px 16px;
+    background-color: white;
+    margin: 46px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 96px;
+      color: #4e61c7;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+
+  .questionBox {
+    margin: 46px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .questionTitle {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4e61c7;
+      color: white;
+      height: 50px;
+      border-top-right-radius: 40px;
+
+      p {
+        font-size: 24px;
+        font-weight: 600;
+        text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        letter-spacing: 4.92px;
+      }
+    }
+
+    .question {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 158px;
+      background-color: rgba(133, 182, 193, 0.9);
+      width: 100%;
+      border-bottom-left-radius: 40px;
+      p {
+        color: #000;
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
+  }
+  .containerInput {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    .pincode-input-container {
+      gap: 16px;
+    }
+  }
+
+  .timer {
+    margin-left: 46px;
+    p {
+      color: #1400ff;
+      font-family: Poppins;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+    }
+  }
+  .containerAnswer {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 46px;
+    align-items: center;
+
+    .btn {
+      border-radius: 25px;
+      background: #1400ff;
+      margin: 0;
+      height: 60px;
+      padding: 11px 30px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      color: white;
+      border-color: #1400ff;
+    }
+    .containerIcon {
+      width: 140px;
+      height: 140px;
+      border-radius: 9999px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 70%;
+      }
+    }
+  }
+}
